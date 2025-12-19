@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Tienda de tony</title>
+  </head>
+  <body class="min-h-screen bg-black">
+    <header>
+      <nav
+        id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="flex items-center justify-between h-20">
+            <a class="flex items-center space-x-3 group">
+              <div class="w-12 h-12 flex items-center justify-center">
+                <img
+                  class="w-full h-full object-contain transition-trasform duration-300 group-hover:scale-110"
+                  src="assets/logo.png"
+                  alt="tony store logo"
+                />
+              </div>
+              <span
+                id="name"
+                class="text-2xl font-bold transition-colors duration-300 text-white"
+                style="font-family: Poppins, sans-serif"
+                >Tony Store</span
+              >
+            </a>
+            <div class="hidden md:flex items-center space-x-8" id="menu-header">
+              <a
+                class="text-sm font-medium transition-colors duration-300 hover:text-teal-500 whitespace-nowrap text-teal-500"
+                data-menu-element
+                href="#inicio"
+                >Inicio</a
+              >
+
+              <a
+                class="text-sm font-medium transition-colors duration-300 hover:text-teal-500 whitespace-nowrap text-white"
+                data-menu-element
+                href="#yugioh"
+                >Yu-Gi-Oh!</a
+              >
+
+              <a
+                class="text-sm font-medium transition-colors duration-300 hover:text-teal-500 whitespace-nowrap text-white"
+                data-menu-element
+                href="#pokemon"
+                >Pokemon</a
+              >
+
+              <a
+                class="text-sm font-medium transition-colors duration-300 hover:text-teal-500 whitespace-nowrap text-white"
+                data-menu-element
+                href="#accesorios"
+                >Accesorios</a
+              >
+
+              <a
+                class="text-sm font-medium transition-colors duration-300 hover:text-teal-500 whitespace-nowrap text-white"
+                data-menu-element
+                href="#contacto"
+                >Contacto</a
+              >
+            </div>
+            <div class="flex items-center space-x-4" id="icons-menu">
+              <a
+                href="#cart"
+                class="relative p-2 rounded-lg transition-all duration-300 hover:bg-teal-500/10 cursor-pointer text-white"
+                data-menu-element
+              >
+                <div class="w-6 h-6 flex items-center justify-center">
+                  <i class="ri-shopping-cart-2-line text-2xl"></i>
+                </div>
+                <span
+                  class="absolute -top-1 -right-1 bg-teal-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center"
+                  >1</span
+                >
+              </a>
+              <button
+                class="md:hidden p-2 rounded-lg transition-colors duration-300 cursor-pointer text-white"
+                data-menu-element
+              >
+                <div class="w-6 h-6 flex items-center justify-center">
+                  <i class="ri-menu-line text-2xl"></i>
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section
+        class="relative min-h-screen flex items-center justify-center overflow-hidden"
+      >
+        <div class="absolute inset-0">
+          <img
+            class="w-full h-full object-cover object-top"
+            src="assets/hero-img.jpg"
+            alt="hero banner"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/40"
+          ></div>
+        </div>
+        <div
+          class="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        >
+          <h1
+            class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+            style="font-family: Poppins, sans-serif"
+          >
+            Descubre el Mundo de las<br />
+            <span class="text-teal-400">Cartas de Colección</span>
+          </h1>
+          <p
+            class="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed"
+          >
+            Encuentra cartas raras, productos cerrados exclusivos y accesorios
+            premium para tu colección. Tu aventura comienza aquí.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              class="px-8 py-4 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 whitespace-nowrap cursor-pointer"
+              href="#calogo"
+            >
+              Explorar Catálogo
+            </a>
+            <a
+              class="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 border-2 border-white/30 whitespace-nowrap cursor-pointer"
+              href="#contacto"
+            >
+              Contáctanos
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center mb-16">
+            <h2
+              class="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+              style="font-family: Poppins, sans-serif"
+            >
+              Productos Destacados
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+              Las cartas y accesorios más populares de nuestra colección
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+            data-product-shop="true"
+          >
+            <div
+              class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+            >
+              <a
+                class="block cursor-pointer"
+                href="#/producto/1"
+                data-discover="true"
+                ><div class="relative w-full h-80 overflow-hidden bg-gray-100">
+                  <img
+                    alt="Booster Pack Edición Especial"
+                    class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                    src="assets/product1.jpg"
+                  />
+                  <div
+                    class="absolute top-3 right-3 px-3 py-1 bg-teal-500 text-white text-xs font-bold rounded-full uppercase"
+                  >
+                    especial
+                  </div>
+                </div></a
+              >
+              <div class="p-5">
+                <a
+                  class="cursor-pointer"
+                  href="/producto/1"
+                  data-discover="true"
+                  ><h3
+                    class="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-teal-500 transition-colors duration-300"
+                  >
+                    Booster Pack Edición Especial
+                  </h3></a
+                >
+                <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                  Pack de 10 cartas con posibilidad de cartas raras y
+                  holográficas
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-2xl font-bold text-teal-500">$24.99</span
+                  ><button
+                    class="px-4 py-2 bg-teal-500 text-white text-sm font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-300 whitespace-nowrap cursor-pointer"
+                  >
+                    Añadir
+                  </button>
+                </div>
+                <div class="mt-3 flex items-center text-sm text-gray-500">
+                  <div class="w-4 h-4 flex items-center justify-center mr-1">
+                    <i class="ri-box-3-line"></i>
+                  </div>
+                  <span>45 en stock</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+            >
+              <a
+                class="block cursor-pointer"
+                href="#/producto/2"
+                data-discover="true"
+                ><div class="relative w-full h-80 overflow-hidden bg-gray-100">
+                  <img
+                    alt="Carta Legendaria - Dragón Celestial"
+                    class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                    src="assets/product2.jpg"
+                  />
+                  <div
+                    class="absolute top-3 right-3 px-3 py-1 bg-teal-500 text-white text-xs font-bold rounded-full uppercase"
+                  >
+                    legendaria
+                  </div>
+                </div></a
+              >
+              <div class="p-5">
+                <a
+                  class="cursor-pointer"
+                  href="#/producto/2"
+                  data-discover="true"
+                  ><h3
+                    class="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-teal-500 transition-colors duration-300"
+                  >
+                    Carta Legendaria - Dragón Celestial
+                  </h3></a
+                >
+                <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                  Carta ultra rara con acabado holográfico premium
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-2xl font-bold text-teal-500">$89.99</span
+                  ><button
+                    class="px-4 py-2 bg-teal-500 text-white text-sm font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-300 whitespace-nowrap cursor-pointer"
+                  >
+                    Añadir
+                  </button>
+                </div>
+                <div class="mt-3 flex items-center text-sm text-gray-500">
+                  <div class="w-4 h-4 flex items-center justify-center mr-1">
+                    <i class="ri-box-3-line"></i>
+                  </div>
+                  <span>3 en stock</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+            >
+              <a
+                class="block cursor-pointer"
+                href="#/producto/3"
+                data-discover="true"
+                ><div class="relative w-full h-80 overflow-hidden bg-gray-100">
+                  <img
+                    alt="Carpeta Coleccionista Premium"
+                    class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                    src="assets/product3.png"
+                  /></div
+              ></a>
+              <div class="p-5">
+                <a
+                  class="cursor-pointer"
+                  href="#/producto/3"
+                  data-discover="true"
+                  ><h3
+                    class="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-teal-500 transition-colors duration-300"
+                  >
+                    Carpeta Coleccionista Premium
+                  </h3></a
+                >
+                <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                  Carpeta de 360 espacios con protectores anti-reflejo
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-2xl font-bold text-teal-500">$34.99</span
+                  ><button
+                    class="px-4 py-2 bg-teal-500 text-white text-sm font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-300 whitespace-nowrap cursor-pointer"
+                  >
+                    Añadir
+                  </button>
+                </div>
+                <div class="mt-3 flex items-center text-sm text-gray-500">
+                  <div class="w-4 h-4 flex items-center justify-center mr-1">
+                    <i class="ri-box-3-line"></i>
+                  </div>
+                  <span>28 en stock</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+            >
+              <a
+                class="block cursor-pointer"
+                href="#/producto/4"
+                data-discover="true"
+                ><div class="relative w-full h-80 overflow-hidden bg-gray-100">
+                  <img
+                    alt="Caja Sellada - Colección Completa"
+                    class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                    src="assets/product4.jpg"
+                  />
+                  <div
+                    class="absolute top-3 right-3 px-3 py-1 bg-teal-500 text-white text-xs font-bold rounded-full uppercase"
+                  >
+                    especial
+                  </div>
+                </div></a
+              >
+              <div class="p-5">
+                <a
+                  class="cursor-pointer"
+                  href="#/producto/4"
+                  data-discover="true"
+                  ><h3
+                    class="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-teal-500 transition-colors duration-300"
+                  >
+                    Caja Sellada - Colección Completa
+                  </h3></a
+                >
+                <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                  Caja sellada con 36 sobres de la última edición
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-2xl font-bold text-teal-500">$149.99</span
+                  ><button
+                    class="px-4 py-2 bg-teal-500 text-white text-sm font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-300 whitespace-nowrap cursor-pointer"
+                  >
+                    Añadir
+                  </button>
+                </div>
+                <div class="mt-3 flex items-center text-sm text-gray-500">
+                  <div class="w-4 h-4 flex items-center justify-center mr-1">
+                    <i class="ri-box-3-line"></i>
+                  </div>
+                  <span>12 en stock</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+            >
+              <a
+                class="block cursor-pointer"
+                href="#/producto/5"
+                data-discover="true"
+                ><div class="relative w-full h-80 overflow-hidden bg-gray-100">
+                  <img
+                    alt="Protectores Ultra Pro (100 unidades)"
+                    class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                    src="assets/product5.jpg"
+                  /></div
+              ></a>
+              <div class="p-5">
+                <a
+                  class="cursor-pointer"
+                  href="#/producto/5"
+                  data-discover="true"
+                  ><h3
+                    class="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-teal-500 transition-colors duration-300"
+                  >
+                    Protectores Ultra Pro (100 unidades)
+                  </h3></a
+                >
+                <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                  Protectores de alta calidad para tus cartas más valiosas
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-2xl font-bold text-teal-500">$12.99</span
+                  ><button
+                    class="px-4 py-2 bg-teal-500 text-white text-sm font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-300 whitespace-nowrap cursor-pointer"
+                  >
+                    Añadir
+                  </button>
+                </div>
+                <div class="mt-3 flex items-center text-sm text-gray-500">
+                  <div class="w-4 h-4 flex items-center justify-center mr-1">
+                    <i class="ri-box-3-line"></i>
+                  </div>
+                  <span>67 en stock</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+            >
+              <a
+                class="block cursor-pointer"
+                href="#/producto/6"
+                data-discover="true"
+                ><div class="relative w-full h-80 overflow-hidden bg-gray-100">
+                  <img
+                    alt="Carta Rara - Fénix de Fuego"
+                    class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                    src="assets/product6.png"
+                  />
+                  <div
+                    class="absolute top-3 right-3 px-3 py-1 bg-teal-500 text-white text-xs font-bold rounded-full uppercase"
+                  >
+                    rara
+                  </div>
+                </div></a
+              >
+              <div class="p-5">
+                <a
+                  class="cursor-pointer"
+                  href="#/producto/6"
+                  data-discover="true"
+                  ><h3
+                    class="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-teal-500 transition-colors duration-300"
+                  >
+                    Carta Rara - Fénix de Fuego
+                  </h3></a
+                >
+                <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                  Carta rara con efecto holográfico de primera edición
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-2xl font-bold text-teal-500">$45.99</span
+                  ><button
+                    class="px-4 py-2 bg-teal-500 text-white text-sm font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-300 whitespace-nowrap cursor-pointer"
+                  >
+                    Añadir
+                  </button>
+                </div>
+                <div class="mt-3 flex items-center text-sm text-gray-500">
+                  <div class="w-4 h-4 flex items-center justify-center mr-1">
+                    <i class="ri-box-3-line"></i>
+                  </div>
+                  <span>8 en stock</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+            >
+              <a
+                class="block cursor-pointer"
+                href="#/producto/7"
+                data-discover="true"
+                ><div class="relative w-full h-80 overflow-hidden bg-gray-100">
+                  <img
+                    alt="Deck Box Deluxe"
+                    class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                    src="assets/product7.jpg"
+                  /></div
+              ></a>
+              <div class="p-5">
+                <a
+                  class="cursor-pointer"
+                  href="#/producto/7"
+                  data-discover="true"
+                  ><h3
+                    class="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-teal-500 transition-colors duration-300"
+                  >
+                    Deck Box Deluxe
+                  </h3></a
+                >
+                <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                  Caja de mazo con cierre magnético y compartimento para dados
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-2xl font-bold text-teal-500">$19.99</span
+                  ><button
+                    class="px-4 py-2 bg-teal-500 text-white text-sm font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-300 whitespace-nowrap cursor-pointer"
+                  >
+                    Añadir
+                  </button>
+                </div>
+                <div class="mt-3 flex items-center text-sm text-gray-500">
+                  <div class="w-4 h-4 flex items-center justify-center mr-1">
+                    <i class="ri-box-3-line"></i>
+                  </div>
+                  <span>41 en stock</span>
+                </div>
+              </div>
+            </div>
+            <div
+              class="group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2"
+            >
+              <a
+                class="block cursor-pointer"
+                href="#/producto/8"
+                data-discover="true"
+                ><div class="relative w-full h-80 overflow-hidden bg-gray-100">
+                  <img
+                    alt="Starter Deck - Edición Iniciación"
+                    class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-500"
+                    src="assets/product8.jpg"
+                  /></div
+              ></a>
+              <div class="p-5">
+                <a
+                  class="cursor-pointer"
+                  href="#/producto/8"
+                  data-discover="true"
+                  ><h3
+                    class="text-lg font-bold text-gray-900 mb-2 line-clamp-2 group-hover:text-teal-500 transition-colors duration-300"
+                  >
+                    Starter Deck - Edición Iniciación
+                  </h3></a
+                >
+                <p class="text-sm text-gray-600 mb-4 line-clamp-2">
+                  Mazo preconstruido perfecto para principiantes
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="text-2xl font-bold text-teal-500">$29.99</span
+                  ><button
+                    class="px-4 py-2 bg-teal-500 text-white text-sm font-semibold rounded-lg hover:bg-teal-600 transition-colors duration-300 whitespace-nowrap cursor-pointer"
+                  >
+                    Añadir
+                  </button>
+                </div>
+                <div class="mt-3 flex items-center text-sm text-gray-500">
+                  <div class="w-4 h-4 flex items-center justify-center mr-1">
+                    <i class="ri-box-3-line"></i>
+                  </div>
+                  <span>33 en stock</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center mt-12">
+            <a
+              class="inline-block px-8 py-4 bg-teal-500 text-white font-semibold rounded-lg hover:bg-teal-600 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap cursor-pointer"
+              href="#/catalogo"
+              data-discover="true"
+              >Ver Todos los Productos</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="text-center p-8">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-teal-500/10 rounded-full mx-auto mb-6"
+              >
+                <i class="ri-shield-check-line text-4xl text-teal-500"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">
+                Autenticidad Garantizada
+              </h3>
+              <p class="text-gray-600">
+                Todos nuestros productos son 100% auténticos y verificados
+              </p>
+            </div>
+            <div class="text-center p-8">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-teal-500/10 rounded-full mx-auto mb-6"
+              >
+                <i class="ri-truck-line text-4xl text-teal-500"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Envío Seguro</h3>
+              <p class="text-gray-600">
+                Empaquetado profesional para proteger tus cartas más valiosas
+              </p>
+            </div>
+            <div class="text-center p-8">
+              <div
+                class="w-16 h-16 flex items-center justify-center bg-teal-500/10 rounded-full mx-auto mb-6"
+              >
+                <i
+                  class="ri-customer-service-2-line text-4xl text-teal-500"
+                ></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3">Soporte 24/7</h3>
+              <p class="text-gray-600">
+                Nuestro equipo está siempre disponible para ayudarte
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 bg-gradient-to-r from-teal-500 to-teal-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2
+            class="text-4xl md:text-5xl font-bold text-white mb-6"
+            style="font-family: Poppins, sans-serif"
+          >
+            ¿Listo para Comenzar tu Colección?
+          </h2>
+          <p class="text-xl text-white/90 mb-8 leading-relaxed">
+            Únete a miles de coleccionistas satisfechos y encuentra las cartas
+            que siempre has buscado
+          </p>
+          <a
+            class="inline-block px-8 py-4 bg-white text-teal-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl whitespace-nowrap cursor-pointer"
+            href="#/catalogo"
+            data-discover="true"
+            >Explorar Ahora</a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="bg-gradient-to-br from-teal-600 to-teal-700 text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 flex items-center justify-center">
+                <img
+                  alt="Tony Store"
+                  class="w-full h-full object-contain"
+                  src="assets/logo.png"
+                />
+              </div>
+              <span
+                class="text-2xl font-bold"
+                style="font-family: Poppins, sans-serif"
+                >Tony Store</span
+              >
+            </div>
+            <p class="text-teal-100 text-sm leading-relaxed max-w-md">
+              Tu tienda especializada en cartas de colección y accesorios
+              premium. Ofrecemos productos auténticos, envíos seguros y la mejor
+              atención al cliente para coleccionistas apasionados.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Enlaces Rápidos</h4>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  class="text-teal-100 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
+                  href="#"
+                  data-discover="true"
+                  >Inicio</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-teal-100 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
+                  href="#/catalogo"
+                  data-discover="true"
+                  >Catálogo</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-teal-100 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
+                  href="#/carrito"
+                  data-discover="true"
+                  >Carrito</a
+                >
+              </li>
+              <li>
+                <a
+                  class="text-teal-100 hover:text-white transition-colors duration-300 text-sm cursor-pointer"
+                  href="#/contacto"
+                  data-discover="true"
+                  >Contacto</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-semibold text-lg mb-4">Contacto</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center mt-0.5">
+                  <i class="ri-mail-line text-lg"></i>
+                </div>
+                <span class="text-teal-100 text-sm">info@tonystore.com</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center mt-0.5">
+                  <i class="ri-phone-line text-lg"></i>
+                </div>
+                <span class="text-teal-100 text-sm">+52 123 345 789</span>
+              </li>
+              <li class="flex items-start space-x-3">
+                <div class="w-5 h-5 flex items-center justify-center mt-0.5">
+                  <i class="ri-map-pin-line text-lg"></i>
+                </div>
+                <span class="text-teal-100 text-sm">Ciudad de México. México</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="mt-8 pt-8 border-t border-teal-500/30">
+          <div
+            class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
+          >
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300 cursor-pointer"
+                ><div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-facebook-fill text-lg"></i></div></a
+              ><a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300 cursor-pointer"
+                ><div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-instagram-line text-lg"></i></div></a
+              ><a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300 cursor-pointer"
+                ><div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-twitter-x-line text-lg"></i></div></a
+              ><a
+                href="#"
+                class="w-10 h-10 flex items-center justify-center bg-white/10 rounded-full hover:bg-white/20 transition-colors duration-300 cursor-pointer"
+                ><div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-youtube-line text-lg"></i></div
+              ></a>
+            </div>
+            <p class="text-teal-100 text-sm">
+              © 2025 Tony Store. Todos los derechos reservados.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script>
+    const navbar = document.getElementById("navbar");
+    const logo = document.getElementById("name");
+    const menuElements = document.querySelectorAll("[data-menu-element]");
+
+    // Define el umbral de desplazamiento (por ejemplo, 50 píxeles)
+    const scrollThreshold = 50;
+    window.addEventListener("scroll", () => {
+      // Comprueba la posición actual del scroll vertical (window.scrollY)
+      if (window.scrollY > scrollThreshold) {
+        // Si el scroll supera el umbral, añade la clase bg-white y elimina bg-transparent
+        logo.classList.add("text-gray-900");
+        logo.classList.remove("text-white");
+        navbar.classList.add("bg-white", "shadow-md");
+        navbar.classList.remove("bg-transparent");
+        menuElements.forEach((el) => {
+          if (el.classList.contains("text-white")) {
+            el.classList.remove("text-white");
+            el.classList.add("text-gray-700");
+          }
+        });
+      } else {
+        // Si el scroll está por encima del umbral, revierte las clases
+        logo.classList.remove("text-gray-900");
+        logo.classList.add("text-white");
+        navbar.classList.remove("bg-white", "shadow-md");
+        navbar.classList.add("bg-transparent");
+        menuElements.forEach((el) => {
+          if (el.classList.contains("text-gray-700")) {
+            el.classList.add("text-white");
+            el.classList.remove("text-gray-700");
+          }
+        });
+      }
+    });
+  </script>
+</html>
